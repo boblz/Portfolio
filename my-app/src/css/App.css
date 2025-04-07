@@ -1,0 +1,729 @@
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body.popup-open {
+  overflow: hidden; /* Disable scrolling */
+}
+
+/* Global Layouts */ 
+.App {
+  text-align: center;
+}
+
+.PageLayoutWhite{
+  height: 1080px;
+  z-index: 0;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.PageLayoutGreenHero{
+  z-index: 0;
+  height: 1080px;
+  width: 100%;
+  background-color: #92FFBC;
+}
+
+
+.PageLayoutGreenScaling{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  display: flex;
+  width: 100%;
+  background-color: #92FFBC;
+  padding-top: 170px;
+  padding-bottom: 170px;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 2s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.button{
+  border: none;
+  font-size: 22px;
+  border: none;
+  color: black;
+  transition-duration: 0.6s;
+  line-height: 40px;
+  cursor: pointer;
+  border-radius: 25px;
+  text-align: center;
+  text-decoration: none;
+  padding-top: 5px;
+  padding-bottom:5px;
+  padding-left: 35px;
+  padding-right: 35px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.button2{
+  border: none;
+  font-size: 22px;
+  border: none;
+  color: black;
+  transition-duration: 0.6s;
+  line-height: 50px;
+  cursor: pointer;
+  border-radius: 25px;
+  text-align: center;
+  text-decoration: none;
+  height: auto;
+  width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 6px;
+  margin-right: 6px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Button1{
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+}
+
+.Button1:hover{
+  color: black;
+  background-color: rgb(255, 255, 255);
+}
+
+.Button1:active{
+  color: black;
+  background-color: white;
+}
+
+.Button2{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Button2:hover{
+  background-color: black;
+  color: white;
+}
+
+.Button2:active{
+  background-color: white;
+  color: black;
+}
+
+.blurBackground {
+  position: relative;
+  z-index: 101;
+}
+
+.blurBackground:after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent grey overlay */
+  z-index: 101; /* Ensure it appears above the content */
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+/* Navigation Bar layout */
+.NavBar {
+  background-color: #92FFBC;
+  display: flex;
+  position: sticky;
+  z-index: 100;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.NavBarBoxResume{
+  display: flex;
+  margin-top: 10px;
+  flex-direction: row;
+  justify-content: center;
+  width: 33%;
+}
+
+.NavBarBoxTitle{
+  display: flex;
+  margin-top: 10px;
+  flex-direction: row;
+  justify-content: left;
+  width: 33%;
+  margin-left: 90px;
+}
+
+.NavBarBoxButton{
+  display: flex;
+  margin-top: 10px;
+  flex-direction: row;
+  justify-content: end;
+  width: 33%;
+  margin-right: 80px;
+}
+
+.NavBarLogoLayout{
+  margin-left:0px;
+  margin-top: 10px;
+}
+
+.NavBarLogo{
+  width: 250px;
+  height: 24px;
+}
+
+
+
+/* Hero Page Layout */
+/* 1:2 ratio Projects to image*/
+.HeroPageProjectsLayout{
+  position:absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 90px;
+  margin-right:90px;
+}
+
+.HeroPageProjectsChildLayout{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-right: 15px;
+}
+
+.HeroPageProjectsChild2Layout{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding-left: 15px;
+  padding-top: 160px;
+}
+
+/*1:3 projects layout*/
+.HeroPageProjectsTitleLayout{
+  text-align: left;
+  font-size: 86px;
+  padding-top: 125px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.HeroPageProjectsSubtitleLayout{
+  display: flex;
+  align-items: left;
+  justify-content: left; 
+  padding-top: 200px;
+}
+
+.HeroPageProjectsSummaryLayout{
+  font-size: 32px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: left;
+  padding-top:50px;
+  padding-right: 100px;
+}
+
+.HeroPageProjectsButtonLayout{
+  display:flex;
+  align-items: left;
+  padding-top: 50px;
+}
+
+.HeroPageImageLayout{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.HeroPageImage{
+  max-width: 930px;
+  max-height: 652px;
+} 
+
+/* About Page Layout */
+.AboutPageLayout{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+ .AboutPageTitleLayout{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 38px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.AboutPageSummaryLayout{
+  padding-left: 385px;
+  padding-right: 385px;
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  font-size: 26px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+ 
+
+/* Skills Page */
+/* 1:3 ratio */
+.SkillsPageLayout{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 250px;
+}
+
+.SkillsPageChildLayout{
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  margin-right: 100px;
+  margin-left: 100px;  
+}
+
+.SkillsPageImageLayout{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+}
+
+.SkillsPageTitleLayout{
+  font-size: 30px;
+  justify-content: top;
+  text-align:top;
+  padding-top:50px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.SkillsPageSummaryLayout{
+  justify-content: center;
+  text-align:center;
+  font-size: 26px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+} 
+
+/* Projects Page */
+.ProjectsPageBoxLayout{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: white;
+  width: 90%;
+  border-radius: 50px;
+  padding-top:100px;
+  padding-bottom:100px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+/* ratio 1:4 */
+.ProjectsMenuBarLayout{
+  width: 20%; 
+  display: flex;
+  flex-direction: column;
+}
+
+.ProjectsMenuBarTitleLayout{
+  font-size: 38px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.ProjectsMenuBarButtonsLayout{
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  font-size: 42px;
+  padding-left: 150px;
+  gap: 50px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding-top: 65px;
+}
+
+
+.TagButton {
+  font-size: 32px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: rgb(76, 76, 76);
+  transition: transform 0.5s ease; 
+  transform: translateX(0);
+}
+
+.TagButton.active {
+  color: rgb(195, 195, 195);
+  transform: translateX(25px);
+}
+
+.TagButton:hover {
+  color: rgb(195, 195, 195);
+    transform: translateX(25px);
+}
+
+.ProjectsMenuBarButtonsChildLayout:active{
+  text-align: center;
+  transition-duration: 0.6s;
+  color: black;
+}
+
+.ProjectsPageProjectsTabLayout{
+  width: 80%; 
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  gap: 100px;
+}
+
+.ProjectsPageProjectsTabComponent{
+  width: 594px;
+  height: 674px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: flex-start;
+  background-color: #f9f9f9;
+  border: 0.5px solid rgb(216, 216, 216);
+  overflow:hidden;
+  position: relative;
+  box-shadow: 0px 10px 2px rgba(0, 0, 0, 0.2);
+
+} 
+
+.ProjectsPageProjectsTabComponent:hover{
+  box-shadow: 0px 10px 2px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05); /* Slightly scale the parent */
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0px 20px 5px rgba(0, 0, 0, 0.2);
+} 
+
+.ProjectsPageProjectsBackgroundImage{
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.ProjectsPageProjectsGradientOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 75%; 
+  transition-duration: 0.4s;
+  background: linear-gradient(to top, rgba(56, 56, 56, 0.7), rgba(0, 0, 0, 0)); /* Faded black gradient */
+  z-index: 1; /* Ensure it appears above the image but below the text */
+}
+
+.ProjectsPageProjectsTabComponent:hover .ProjectsPageProjectsGradientOverlay{
+  height: 110%;
+  background: linear-gradient(to top, rgba(56, 56, 56, 0.9), rgba(0, 0, 0, 0)); /* Faded black gradient */
+  cursor: pointer;
+}
+
+.ProjectsPageProjectButtonTitleLayout{
+  pointer-events: none; 
+  padding-top: 400px;
+  padding-left: 50px;
+  padding-bottom: 20px;
+  z-index: 2; 
+  color: white;
+  font-size: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.ProjectsPagProjectButtonSkillsLayout{
+  pointer-events: none; 
+  padding-left: 50px;
+  padding-bottom: 20px;
+  z-index: 2; 
+  color: white;
+  font-size: 24px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.ProjectsPageProjectButtonSummaryLayout{
+  text-align: left;
+  pointer-events: none; 
+  padding-right: 50px;
+  padding-left: 50px;
+
+  z-index: 2; 
+  color: white;
+  font-size: 26px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+} 
+
+/* Contact Page */
+.ContactPageJobsBackground{
+  background-image: url('../images/Contact_background.png');
+  background-size: 100% 120%;
+  background-position: top;
+  background-repeat: no-repeat;
+  position:relative;
+}
+
+.ContactPageJobsLayout{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1500px;
+}
+
+.ContactPageJobsTitleLayout{
+  color: grey;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 24px;
+  padding-top: 246px;
+}
+
+.ContactPageJobsImagesLayout{
+  width: 1600px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.ContactPageJobsImage{
+  width: auto;
+  height: auto;
+  margin: 50px;
+}
+
+.ContactPageJobsImage:nth-child(n+4){
+  margin: 10px 120px;
+}
+
+.ContactPageContactLayout{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 300px;
+} 
+
+.ContactPageContactTitleLayout{
+  font-size: 26px;
+} 
+
+.ContactPageContactButtonLayout{
+  display: flex;
+  padding-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.ContactPageContactButtonImageEmail{
+  margin-left: 50px;
+  margin-right: 50px;
+  content: url('../images/Email.png');
+  cursor: pointer;
+} 
+
+.ContactPageContactButtonImageEmail:hover{
+  margin-left: 50px;
+  margin-right: 50px;
+  content: url('../images/Email_click.png');
+}
+
+.ContactPageContactButtonGithub{
+  margin-left: 50px;
+  margin-right: 50px;
+  content: url('../images/Github.png');
+  cursor: pointer;
+}
+
+.ContactPageContactButtonGithub:hover{
+  margin-left: 50px;
+  margin-right: 50px;
+  content: url('../images/Github_click.png');
+}
+
+.ContactPageContactButtonImageLinkedin{
+  margin-left: 50px;
+  margin-right: 50px;
+  content: url('../images/Linkedin.png');
+  cursor: pointer;
+} 
+
+.ContactPageContactButtonImageLinkedin:hover{
+  margin-left: 50px;
+  margin-right: 50px;
+  content: url('../images/Linkedin_click.png');
+} 
+
+.CopyRightNotice{
+  padding-top: 100px;
+  text-align: center;
+  font-size: 16px;
+  color: grey;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Portfolio Popup */
+
+.ProjectPopupLayout{
+  position: fixed;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for the element's size */
+  width: 1800px;
+  height: 900px;
+  background-color: white;
+  border-radius: 50px; 
+  border: 2px solid rgb(141, 141, 141);
+  z-index: 1000;
+  box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.4);
+  overflow-y: auto; /* Enable vertical scrolling inside the popup */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.ProjectPopupLayoutChild{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.ProjectPopupExitTitleLayout{
+  font-size: 18px;
+  color: grey;
+}
+
+.ProjectPopupTitle{
+  font-size: 62px;
+  color: black;
+  padding-top: 100px;
+}
+
+.ProjectPopupMainImageLayout{
+  margin-top : 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ProjectPopupMainImage{
+  width: 1200px;
+  height: 550px;
+}
+
+.ProjectPopupSummaryLayout{
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  width: 1800px;
+  align-items: center;
+
+  background-image: url('../images/Popup_background.png');
+  background-size: 100% 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  position:relative;
+}
+
+.ProjectPopupSummaryChildLayout{
+  display: flex;
+  flex-direction: row;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 200px;
+  gap: 150px;
+}
+
+.ProjectPopupSummaryDescriptionLayout{
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+}
+
+.ProjectPopupSummaryTitleLayout{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.ProjectPopupSummaryTitle{
+  font-size: 30px;
+  text-align: left;
+  white-space: nowrap; 
+}
+
+.ProjectPopupSummarySubtitle{
+  font-size: 30px;
+  color: grey;
+  padding-left: 30px;
+  text-align: left;
+
+}
+
+.ProjectPopupSummaryImageLayout{
+  display: flex;
+}
+
+.ProjectPopupSummaryImage{
+  width: 500px;
+  height: 300px;
+  object-fit: contain; /* Ensures the image fits within the container without distortion */
+
+}
+
+.ProjectPopupSummaryDescription{
+  font-size: 26px;
+  padding-top: 50px;
+  text-align: left;
+}
+
+.ProjectPopupButtonLayout{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: left;
+  gap: 25px;
+}
