@@ -50,7 +50,7 @@ function App() {
       alert("Clipboard API not supported in this browser.");
       return false;
     }
-    var email = "aidanma2013@gmail.com";
+    var email = "Dummy@gmail.com";
     console.log("click!");
     navigator.clipboard.writeText(email).then(() =>{
       alert("Copied email to clipboard!");
