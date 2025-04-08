@@ -35,12 +35,10 @@ function App() {
   const [selectedTags, setSelectedTags] = useState("All");
 
   const tags = ["All", ...new Set(projects.map((item) => item.tag))];
-  console.log(tags);
   // Outputs data sets based on the condition of if selectedTags == "All", output all tags, otherwise only the selected
   const filteredProjects = selectedTags === "All"
   ? projects
   : projects.filter((project) => project.tag === selectedTags);
-  console.log(filteredProjects)
 
   // Helper function to copy email to clipboard
   // Input: None
@@ -50,8 +48,7 @@ function App() {
       alert("Clipboard API not supported in this browser.");
       return false;
     }
-    var email = "Dummy@gmail.com";
-    console.log("click!");
+    var email = "aidanmacoding@gmail.com";
     navigator.clipboard.writeText(email).then(() =>{
       alert("Copied email to clipboard!");
       return true;
@@ -84,21 +81,18 @@ function App() {
   // Helper function to apply on/off function for pop-up
 
   function togglePopupOn(index) {
-    console.log("Popup On Triggered for index:", index);
     document.body.classList.add('popup-open'); // Disable scrolling
     setSelectedProjectIndex(index); // Store the selected index
     setIsPopupVisible(true);
   }
 
   function togglePopupOff() {
-    console.log("Popup Off Triggered");
     document.body.classList.remove('popup-open'); // Enable scrolling
     setSelectedProjectIndex(null); // Clear the selected index
     setIsPopupVisible(false);
   }
 
 
-  // Main HTML code for the website
   return (
     <div className={`App ${isPopupVisible ? 'blurBackground' : ''}`} onClick = {togglePopupOff}>
 
@@ -146,14 +140,13 @@ function App() {
           <strong>&lt; About &gt;</strong>
           </div>
           <div className='AboutPageSummaryLayout fade-in'>
-            <p>Hi, my name is <b><u>Aidan Ma!</u></b> </p>
+            <p>Hi, my name is <b><u>Aidan Ma</u></b> </p>
             <p>I have worked in many companies either as a software 
               engineer or as an analyst. I have built <b>mobile applications</b> and <b>internal tools</b> for these companies. 
               On off-hours, I keep up to date with the latest <b>artificial intelligence</b> and <b>cloud technologies</b> by 
-              building cool projects!</p>
+              building projects to enhance my skillsets.</p>
             <p>I speak both <b>English</b> and <b>Chinese</b>. During my spare time I enjoy golfing, hanging out with friends, 
               and designing my own living space. </p>
-            <p>I hope you enjoy my projects!</p>
           </div>
         </div>
       </main>
@@ -192,7 +185,7 @@ function App() {
               </div>
               <div className='SkillsPageSummaryLayout fade-in'>
                 <p>To collaborate, I use <b>Git</b> and <b>Shell</b>.</p>
-                <p>The tools I use to collaborate are <b>GitHub</b>, <b>Figma</b>, <b>Jira</b>, <b>Confluence</b>, and <b>Bitbucket</b></p>
+                <p>The tools I use to collaborate are <b>Github</b>, <b>Jenkins</b>, <b>Figma</b>, <b>Jira</b>, <b>Confluence</b>, and <b>Bitbucket</b></p>
               </div>              
           </div>
         </div>
@@ -218,6 +211,7 @@ function App() {
               {tags.map((tag, index) => (
                 <a
                   key={index}
+                  href='#Projects'
                   className={`TagButton ${selectedTags === tag ? "active" : ""}`}
                   onClick={() => setSelectedTags(tag)}
                 >
@@ -269,7 +263,7 @@ function App() {
             </div>
             <div className='ContactPageContactLayout fade-in' id='Contact'>
               <div className='ContactPageContactTitleLayout'>
-                <b>You can reach out to me here!</b>
+                <b>You can reach out to me here</b>
               </div>
               <div className='ContactPageContactButtonLayout'>
                 <div className='ContactPageContactButtonChildLayout'>

@@ -376,6 +376,7 @@ body.popup-open {
 
 
 .TagButton {
+  text-decoration: none;
   font-size: 32px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -646,17 +647,20 @@ body.popup-open {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .ProjectPopupMainImage{
-  width: 1200px;
+  width: auto;
   height: 550px;
+
 }
 
 .ProjectPopupSummaryLayout{
   display: flex;
   flex-direction: column;
   margin-top: 100px;
+  padding-bottom: 100px;
   width: 1800px;
   align-items: center;
 
@@ -705,6 +709,7 @@ body.popup-open {
 
 .ProjectPopupSummaryImageLayout{
   display: flex;
+  align-items: center;
 }
 
 .ProjectPopupSummaryImage{
